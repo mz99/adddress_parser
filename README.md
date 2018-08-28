@@ -8,13 +8,16 @@ Make sure libpostal https://github.com/openvenues/ruby_postal is installed in or
 
 ### Requests
 
-Send a post request with { "geo": { "address": "<Address to be parsed>" } to the /locations endpoint. JSON will be returned with the parsed address components. Example: 
-  {
-    "road": "Schivelbeinstraße",
-    "house_number": "19",
-    "postcode": "10439",
-    "city": "berlin"
-  }
+Send a post request with: 
+`{ "geo": { "address": "Address to be parsed" }` 
+to the /locations endpoint. JSON will be returned with the parsed address components. Example: 
+  
+`{`
+  `"road": "Schivelbeinstraße",`
+  `"house_number": "19",`
+  `"postcode": "10439",`
+  `"city": "berlin"`
+`}`
  
 ### Running tests
 
