@@ -1,24 +1,21 @@
-# README
+# Rails address web service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This service will accept a post request with an address value, then parse it into address components to return it back to JSON. 
 
-Things you may want to cover:
+### Installation
 
-* Ruby version
+Make sure libpostal https://github.com/openvenues/ruby_postal is installed in order to deploy this service.
 
-* System dependencies
+### Requests
 
-* Configuration
+Send a post request with { "geo": { "address": "<Address to be parsed>" } to the /locations endpoint. JSON will be returned with the parsed address components. Example: 
+  {
+    "road": "Schivelbeinstraße",
+    "house_number": "19",
+    "postcode": "10439",
+    "city": "berlin"
+  }
+ 
+### Running tests
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rspec spec will run the request spec and service helper spec in the /specs folder.
