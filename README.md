@@ -21,4 +21,4 @@ to the /locations endpoint. JSON will be returned with the parsed address compon
  
 ### Running tests
 
-rspec spec will run the request spec and service helper spec in the /specs folder.
+'rspec spec' will run the request spec and service helper spec in the /specs folder.
