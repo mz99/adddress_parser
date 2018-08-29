@@ -6,4 +6,10 @@ RSpec.describe GeocoderService, type: :helper do
     expect(service.parse_address).to include({city: 'berlin', road: 'prinzessinnenstraße', house_number: '26', postcode: '10969' })
   end
 
+  let (:service) { GeocoderService.new('') }
+
+  it "the service successfully parses an address" do
+    expect(service.parse_address).to include({city: 'berlin', road: 'prinzessinnenstraße', house_number: '26', postcode: '10969' })
+  end
+
 end

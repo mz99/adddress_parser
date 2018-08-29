@@ -3,7 +3,8 @@ class LocationsController < ApplicationController
   def create
     if geo_params[:address]
       result = GeocoderService.new(geo_params[:address])
-      render json: result
+      address_components = result.parse_address
+      render json: address_components
     else
       render json: { error: "Invalid address"}, status: 400
     end

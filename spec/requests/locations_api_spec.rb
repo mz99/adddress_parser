@@ -7,7 +7,7 @@ RSpec.describe "LocationsApi", type: :request do
     let(:address_params) do
       {
         geo: {
-          address: "Prinzessinnenstraße 26, 10969 Berlin",
+          # address: "Prinzessinnenstraße 26, 10969 Berlin",
         }
       }
     end
